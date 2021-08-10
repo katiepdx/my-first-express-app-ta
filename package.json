@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/katiepdx/my-first-express-app-ta/issues"
   },
-  "homepage": "https://github.com/katiepdx/my-first-express-app-ta#readme"
+  "homepage": "https://github.com/katiepdx/my-first-express-app-ta#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
