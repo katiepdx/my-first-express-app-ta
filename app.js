@@ -1,8 +1,10 @@
-console.log('hello from index.js')
+console.log('hello from app.js')
+// import data
+const players = require('./data.js')
+
 // Web server - listening for http requests
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -16,6 +18,10 @@ app.get('/puppies', (req, res) => {
   res.send(`Puppies are cute! Especially ${req.query.name}`)
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.get('/players', (req, res) => {
+  res.send(players)
 })
+
+// export app routes
+// server.js will listen on port 3000 for incoming reqs to the routes
+module.exports = app
