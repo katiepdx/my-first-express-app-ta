@@ -7,7 +7,12 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send(`
+  <h1>Welcome!</h1> 
+  <h2>Endpoints</h2>
+  <li> /players --> returns json array of all players </li>
+  <li>/players/:id --> (ex. /players/1) --> returns json object of a single player with the matching id</li>
+  `)
 })
 
 // index route - GET all for a resource

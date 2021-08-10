@@ -22,5 +22,13 @@ it('gets the players show endpoint - player by id', async () => {
   const response = await request.get('/players/1')
 
   expect(response.status).toBe(200)
-  expect(response.body).toEqual({"id": 1, "name": "Sue Bird", "team": "Seattle Storm"})
+  expect(response.body).toEqual(
+    { 
+      id: 1, 
+      name: 'Sue Bird', 
+      team: 'Seattle Storm',
+      isActive: true,
+      number: 10
+    }
+  )
 })
