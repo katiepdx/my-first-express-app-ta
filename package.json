@@ -4,6 +4,8 @@
   "description": "# Steps for Creating Express App 1. Create a new GH repo with readme 1. run `npm init -y`   - this creates a `package.json` file",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
