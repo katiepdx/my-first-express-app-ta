@@ -10,16 +10,16 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/puppies', (req, res) => {
-  // looks for query params
-  console.log(req.query);
-  // looks for the name=dogName to add to the response
-  // localhost:3000/puppies?name=Clifford
-  res.send(`Puppies are cute! Especially ${req.query.name}`)
-})
-
+// index route - GET all for a resource
 app.get('/players', (req, res) => {
   res.send(players)
+})
+
+// show route - GET info for ONE resource
+app.get('/players/:id', (req, res) => {
+  const id = Number(req.params.id)
+  const playerById = players.find(player => player.id === id)
+  res.send(playerById)
 })
 
 // export app routes
