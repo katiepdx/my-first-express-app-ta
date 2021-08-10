@@ -19,4 +19,23 @@
   - Nodemon for constantly listening for changes: `"start:watch": "nodemon index.js"`
 1. push to heroku (from main): `git push heroku main`
 1. push to heroku (from dev): `git push heroku dev:main`
+1. once deploy has successfully completed --> you can go to `...herokuapp.com` and view the deployed site!
 
+# Data
+1. add a data.js file
+1. create data and save to a variable --> then `module.exports = dataVariable`
+1. go to index.js and import data `const data = require('./data.js');`
+1. can `res.send(data)` in an api endpoint
+1. NOTE: undefined route error: `Cannot GET /blah`
+
+# Testing Endpoints
+1. create a `__test__` file with a `name.test.js` file
+1. rename index.js to server.js
+1. add app.js
+1. server.js is responsible for listening
+1. app.js responsible for the logic 
+1. `npm i supertest` -- for making requests in testing to your apps endpoints
+1. `npm i jest` -- for testing
+1. add test script `"test": "jest"`
+1. create `it` block with test
+1. `npm run test` -- which runs `jest`
